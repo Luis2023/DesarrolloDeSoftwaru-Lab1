@@ -8,12 +8,12 @@
 </head>
 <body>
     <div>
-    <h1>  Bienvenido :D  </h1>
-        <a href="http://localhost:4746/video">Ver Video</a>
-    <h4>Ver Video</h4>
-     <h4>agregar Video</h4>
-      <h4>Eliminar Video</h4>
-       <h4>Modificar Video</h4>
+    <h1>Ver Video</h1>
+    <h4>Cometiste un error¿? quieres regresar al menu,<a href="http://localhost:4746/"> para eso da click aqui</a></h4>
     </div>
+    <hr />
+    <h1>Eliminar video</h1>
+    
+
 </body>
 </html>
