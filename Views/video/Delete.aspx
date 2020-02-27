@@ -4,16 +4,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>Index</title>
+    <title>Delete</title>
 </head>
 <body>
     <div>
-    <h1>Ver Video</h1>
-    <h4>Cometiste un error¿? quieres regresar al menu,<a href="http://localhost:4746/"> para eso da click aqui</a></h4>
+     <h1>quieres eliminar un video¿? :c</h1>
+     <h4>Cometiste un error¿? quieres regresar al menu,<a href="http://localhost:4746/"> para eso da click aqui</a></h4>
+        <br />
     </div>
-    <hr />
-    <h1>Eliminar video</h1>
-    
-
 </body>
 </html>

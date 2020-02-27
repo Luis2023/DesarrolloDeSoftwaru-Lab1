@@ -4,18 +4,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>Index</title>
+    <title>TuVideoHaSidoSubido</title>
 </head>
 <body>
     <div>
-    <h1>  Bienvenido :D  </h1>
-        <a href="/video/VerVideo">Ver Video</a>
-        <br />
-        <a href="/video/Agregar">Agregar Video</a>
-        <br />
-        <a href="/video/Delete">Eliminar Video</a>
-        <br />
-       <h4>Modificar Video</h4>
+     <h1>Felicidades :D</h1>
     </div>
 </body>
 </html>

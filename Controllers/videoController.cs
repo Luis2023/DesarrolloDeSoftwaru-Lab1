@@ -13,20 +13,69 @@ namespace MvcPlantilla.Controllers
     {
         //
         // GET: /video/
-
-        public ActionResult Index()
-        {
+        public ActionResult VerVideo()
+        {//Consultar videos de la BD
+            ViewData["video"] = BaseHelper.ejecutarConsulta(
+                "SELECT * FROM video", CommandType.Text);
+            return View();
+        }
+//----------------------------------------------------------------------------------------------------------------------------------------------------------
+        public ActionResult Agregar()
+        {//Consultar videos de la BD
+            ViewData["video"] = BaseHelper.ejecutarConsulta(
+                   "SELECT * FROM video", CommandType.Text);
             return View();
         }
 
         
+        //Procesa los datos ingresados a la base
+        [HttpPost]
+        public ActionResult Agregar(int idVideo,
+                                   string titulo,
+                                   int reproducciones,
+                                   string url)
+    {
+        //Guardar los datos en la Base
+        List<SqlParameter> parametros = new List<SqlParameter>();
+        parametros.Add(new SqlParameter("@idVideo", idVideo));
+        parametros.Add(new SqlParameter("@titulo", titulo));
+        parametros.Add(new SqlParameter("@reproducciones", reproducciones));
+        parametros.Add(new SqlParameter("@url", url));
 
-          [HttpPost] public ActionResult create (int idVideo)
-          {
-        List<SqlParameter> Parametros = new List<SqlParameter>();
-        Parametros.Add(new SqlParameter("@idVideo", idVideo));
+        BaseHelper.ejecutarSentencia("INSERT INTO video " +
+                                     "VALUES(@idVideo,@titulo," +
+                                     "@reproducciones,@url)",
+                                     CommandType.Text,
+                                     parametros);
+
+
+        return View("TuVideoHaSidoSubido");
+
+    }
+
+        public ActionResult TuVideoHaSidoSubido ()
+        {
+            return View();
+        }
+
+
+
+        public ActionResult Delete()
+        {
+            List<SqlParameter>Parametros =new List<SqlParameter>();
+
+            
+            
+            return View();
+        }
+
+       
+
+        
+
+        
 
           }
 
     }
-}
+
