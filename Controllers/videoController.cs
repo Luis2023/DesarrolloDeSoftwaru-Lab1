@@ -58,23 +58,45 @@ namespace MvcPlantilla.Controllers
             return View();
         }
 
-
+//---------------------------------------------------------------------------------------------------------------------------------------------------------
 
         public ActionResult Delete()
         {
-            List<SqlParameter>Parametros =new List<SqlParameter>();
-
-            
-            
+            ViewData["video"] = BaseHelper.ejecutarConsulta(
+                      "SELECT * FROM video", CommandType.Text);
             return View();
         }
 
-       
+        //Procesa los datos ingresados a la base
+        [HttpPost]
+        public ActionResult Delete(int idVideo)
+        {//Guardar los datos en la Base
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(new SqlParameter("@idVideo", idVideo));
 
-        
+            BaseHelper.ejecutarSentencia("DELETE FROM video " +
+                                     "WHERE idVideo = @idVideo",
+                                     CommandType.Text,
+                                     parametros);
 
-        
+            return View("TuVideoHaSidoEliminado");
+        }
 
+        public ActionResult TuVideoHaSidoEliminado ()
+        {
+            return View();
+        }
+//---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        public ActionResult Update()
+        {
+            return View();
+        }
+
+
+
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------
           }
 
     }

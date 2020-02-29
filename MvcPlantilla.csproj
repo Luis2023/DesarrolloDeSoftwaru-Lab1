@@ -80,7 +80,9 @@
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\video\Agregar.aspx" />
     <Content Include="Views\video\Delete.aspx" />
+    <Content Include="Views\video\TuVideoHaSidoEliminado.aspx" />
     <Content Include="Views\video\TuVideoHaSidoSubido.aspx" />
+    <Content Include="Views\video\Update.aspx" />
     <Content Include="Views\video\VerVideo.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

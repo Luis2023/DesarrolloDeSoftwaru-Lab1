@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>Index</title>
+    <title>Index</title>   
 </head>
 <body>
     <div>
@@ -15,7 +15,8 @@
         <br />
         <a href="/video/Delete">Eliminar Video</a>
         <br />
-       <h4>Modificar Video</h4>
+        <a href="/video/Update">Modificar cualquier dato de tu video ;v</a>
+        <br />
     </div>
 </body>
 </html>

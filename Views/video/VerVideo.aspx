@@ -11,14 +11,17 @@
      <h1>Pierde el tiempo con nosotros, ve tus video favoritos aqui :D</h1>
      <h4>Cometiste un error¿? quieres regresar al menu,<a href="http://localhost:4746/"> para eso da click aqui</a></h4>
 
-     Hay <%: ((System.Data.DataTable)ViewData["video"]).Rows.Count %> video
+     Hay <%: ((System.Data.DataTable)ViewData["video"]).Rows.Count %> videos
     <hr />
 
     <%
         foreach (System.Data.DataRow video in ((System.Data.DataTable)ViewData["video"]).Rows)
         {  %> 
         
-                        <p>  <%: video["titulo"].ToString() %>  </p>
+                        <p>  <%: video["titulo"].ToString()%>
+                            <br />
+                 idVideo= [<%:video ["idVideo"].ToString()%>] </p>
+                                   
                         <iframe width="560" height="315" src="<%: video["url"].ToString() %>"
                          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         

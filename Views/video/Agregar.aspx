@@ -15,7 +15,7 @@
     "<%: ((System.Data.DataTable)ViewData["video"]).Rows.Count %>"</p>
         <hr />
 
-        <h3>seguro quieres eliminarlo del fas de el internet :c</h3>
+        
         <br />
         <form action="/video/Agregar" method=post>
         <fieldset>

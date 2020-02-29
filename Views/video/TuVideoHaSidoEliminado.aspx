@@ -4,12 +4,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>TuVideoHaSidoSubido</title>
+    <title>TuVideoHaSidoEliminado</title>
 </head>
 <body>
     <div>
-     <h1>Felicidades :D</h1>
-     <h4>quieres regresar al menu,<a href="http://localhost:4746/"> para eso da click aqui</a></h4>
+    <h1>Felicidades, tu video se elimino</h1>
     </div>
 </body>
 </html>
