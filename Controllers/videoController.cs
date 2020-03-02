@@ -90,11 +90,38 @@ namespace MvcPlantilla.Controllers
 
         public ActionResult Update()
         {
+            
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Update (int idVideo,
+                                   string titulo,
+                                   int reproducciones,
+                                   string url)
+        {
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(new SqlParameter("@idVideo", idVideo));
+            parametros.Add(new SqlParameter("@titulo", titulo));
+            parametros.Add(new SqlParameter("@reproducciones", reproducciones));
+            parametros.Add(new SqlParameter ("@url", url));
 
+            BaseHelper.ejecutarSentencia("UPDATE video SET  idVideo = @idVideo, titulo = @titulo, reproducciones= @reproducciones, url = @url WHERE idVideo = @idVideo",CommandType.Text,parametros);
+                                         
+                                        
+                                         
+                                          
+                                          
+                                          
 
+                             return View("TuVideoHaSidoActualizado");
+        }
+
+        public ActionResult TuVideoHaSidoActualizado()
+        {
+            return View();
+        }
+  
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------
           }
