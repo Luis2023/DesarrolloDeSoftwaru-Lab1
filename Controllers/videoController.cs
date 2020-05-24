@@ -106,7 +106,7 @@ namespace MvcPlantilla.Controllers
             parametros.Add(new SqlParameter("@reproducciones", reproducciones));
             parametros.Add(new SqlParameter ("@url", url));
 
-            BaseHelper.ejecutarSentencia("UPDATE video SET  idVideo = @idVideo, titulo = @titulo, reproducciones= @reproducciones, url = @url WHERE idVideo = @idVideo",CommandType.Text,parametros);
+            BaseHelper.ejecutarSentencia("UPDATE video SET  idVideo = @idVideo,"+"titulo = @titulo, reproducciones= @reproducciones, url = @url WHERE idVideo = @idVideo",CommandType.Text,parametros);
                                          
                                         
                                          
